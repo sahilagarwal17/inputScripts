@@ -1,0 +1,19 @@
+import ethanol.lt
+import tip5p_oplsaa.lt
+
+
+ethanolcube = new ethanol [5].move(0,0,10)
+                          [5].move(0,10,0)
+                          [5].move(10,0,0)
+
+watercube = new TIP5P [5].move(0,0,7)
+		      [5].move(0,7,0)
+		      [5].move(7,0,0)		
+
+write_once("Data Boundary") {
+
+   -5 50 xlo xhi
+   -5 50 ylo yhi
+   -5 50 zlo zhi
+
+}

@@ -1,0 +1,48 @@
+# montmorillonite is a monoclinic unit cell, so alpha and gamma are 90
+# B has a value of 101.4 , taken from paper [26]
+# a = 5.18 b = 8.98 c= 10.05, all in angstroms
+# M is the octahedral coordinating atom, T is the tetrahedral coordinating atom
+# Silica for Tetrahedral, Alumina for the octahedral
+ 
+
+    write("Data Atoms") {
+	#AtomID   MolID     AtomType  Charge   x         y       z
+	$atom:Al  $mol:...  @atom:Al  0.0     0.0000  3.02000 15.5000
+	$atom:Si  $mol:...  @atom:Si  0.0     0.47200 1.51000 12.5800
+	$atom:O1  $mol:...  @atom:O   0.0     0.12200 0.00000 12.0400
+	$atom:O2  $mol:...  @atom:O   0.0    -0.68600 2.61500 12.2400 
+	$atom:O3  $mol:...  @atom:O   0.0     0.77200 5.51000 14.2000
+	$atom:O4  $mol:...  @atom:O   0.0     0.80800 4.50000 14.2500
+        $atom:H1  $mol:...  @atom:H   0.0    -0.10300 4.53000 13.8120
+
+	}# atomic coordinates
+
+    write_once("In Init") {
+
+	units metal
+	atom_style full
+	pair_style reax/c NULL
+    }
+
+
+    
+    write_once("In Settings") {
+	pair_coeff * * ffield.reax
+    }
+
+
+
+    write_once("Data Masses") {
+    @atom:Si 28.0855
+    @atom:O  15.9994
+    @atom:Al 26.9815
+    @atom:H  1.01
+
+    }
+
+
+
+
+} #montmorillonite
+
+

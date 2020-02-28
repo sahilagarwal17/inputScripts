@@ -1,0 +1,14 @@
+#based on lattice parameters and coordinates form Ca-Montmorillonite
+#Article: Effects of Layer Charge Characteristics on the Distribution
+#Characteristics of H2) and Ca2 in Ca-MOntmorillonites Interlayer Space: MD 
+#Simulation
+#By Jun Qiu, Guoqing Li
+
+
+import modifiedmontmorillonite.lt
+import water_box.lt
+
+lattice = new montmorillonite [5].move(5.18,0,0)
+			      [5].move(0,8.98,0)
+			      [3].move(0,0,15.00)
+

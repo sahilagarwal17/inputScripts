@@ -1,0 +1,43 @@
+# gaff lt has the definitions of many different types of bonds
+
+import "gaff.lt"
+
+
+ethanol inherits GAFF {
+
+
+   #atomID  molID  atomtitle  charge   x         y          z 
+
+ write('Data Atoms') {
+   $atom:o1 $mol:e @atom:oh   -0.520351   -1.147741 -0.406185  0.000000
+   $atom:c2 $mol:e @atom:c3   -0.269975    1.225516  0.548036  0.000000 
+   $atom:c1 $mol:e @atom:c3    0.020246   -0.083071  0.548036  0.000000
+   $atom:h6 $mol:e @atom:h3    0.087165    1.299343 -0.852891 -0.884848
+   $atom:h5 $mol:e @atom:h3    0.087165    1.299343 -0.852891  0.884848
+   $atom:h4 $mol:e @atom:h3    0.087165    2.074218  0.474339  0.000000
+   $atom:h3 $mol:e @atom:h3    0.073583   -0.148310  1.193128 -0.887383
+   $atom:h2 $mol:e @atom:h3    0.073583   -0.148310  1.193128  0.887383
+   $atom:h1 $mol:e @atom:ho    0.361419   -1.993992  0.055874  0.000000
+ }
+
+ # atom h1 is the hydroxly group atom, the rest are for bonding with SP3 carbon
+ # with 3 additional  electron groups 
+
+ write('Data Bond List') {
+   $bond:o1h1 $atom:o1 $atom:h1
+   $bond:c1o1 $atom:c1 $atom:o1
+   $bond:c1h2 $atom:c1 $atom:h2
+   $bond:c1h3 $atom:c1 $atom:h3
+   $bond:c1c2 $atom:c1 $atom:c2
+   $bond:c2h5 $atom:c2 $atom:h5
+   $bond:c2h6 $atom:c2 $atom:h6
+   $bond:c2h4 $atom:c2 $atom:h4
+ }
+
+
+
+} #ethanol 
+
+
+
+

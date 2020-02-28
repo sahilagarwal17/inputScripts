@@ -1,0 +1,32 @@
+#SiO2 molecule
+
+Silica {
+
+
+    write("Data Atoms") {
+
+	# AtomID  MolID     AtomType    Charge    X         Y        Z
+	$atom:0   $mol:...  @atom:O     0.0	1.37414  1.13704  0.64208 
+	$atom:Si  $mol:...  @atom:Si	0.0	2.30771  0.00000  0.00000
+    }
+
+    write_once("In Init") {
+	
+	units metal
+	atom_style full
+	pair_style reax/c NULL
+    }
+
+    write_once("In Settings") {
+	pair_coeff  * * ffield.reax
+    }
+
+    write_once("Data Masses") {
+	@atom:Si 28.0855
+	@atom:O 15.9994
+	
+    }
+
+
+
+} #Silica 

@@ -1,0 +1,12 @@
+@/atom:Silica/Si   1       #"Silica.lt", line 31
+@/atom:Silica/O   2       #"Silica.lt", line 32
+$/mol:asym[0]   1       #"Silica.lt", line 8
+$/atom:asym[0]/Si   1       #"Silica.lt", line 8
+$/atom:asym[0]/Si2   2       #"Silica.lt", line 9
+$/atom:asym[0]/Si3   3       #"Silica.lt", line 10
+$/atom:asym[0]/O1   4       #"Silica.lt", line 11
+$/atom:asym[0]/O2   5       #"Silica.lt", line 12
+$/atom:asym[0]/O3   6       #"Silica.lt", line 13
+$/atom:asym[0]/O4   7       #"Silica.lt", line 14
+$/atom:asym[0]/O5   8       #"Silica.lt", line 15
+$/atom:asym[0]/O6   9       #"Silica.lt", line 16

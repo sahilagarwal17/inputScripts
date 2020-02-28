@@ -1,0 +1,7 @@
+import Silica.lt
+
+#oneunit = new Silica [1].move(0,0,0)
+
+asym =  new Silica [1].move(2.45685, 0, 0.00)
+#		   [5].move(0.00, 4.255389, 0.00)
+#		   [5].move(0.00,0.00,5.40470)

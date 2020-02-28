@@ -1,0 +1,38 @@
+
+Silica {
+
+
+    write("Data Atoms") {
+
+	# AtomID  MolID     AtomType    Charge    X         Y        Z
+	$atom:Si  $mol:...  @atom:Si	0.0	2.30771  0.00000  0.00000
+	$atom:Si2 $mol:...  @atom:Si	0.0    -1.15398  1.99876  3.60313
+	$atom:Si3 $mol:...  @atom:Si    0.0     1.30259  2.25663  1.80157
+	$atom:O1  $mol:...  @atom:O     0.0     1.37414  1.13704  0.64207
+	$atom:O2  $mol:...  @atom:O     0.0	0.29738  1.75875  2.96123
+	$atom:O3  $mol:...  @atom:O	0.0	3.24143  0.62171  4.24539
+	$atom:O4  $mol:...  @atom:O	0.0	0.78465  3.63368  1.15931
+	$atom:O5  $mol:...  @atom:O     0.0	2.75392  2.49664  2.44346
+	$atom:O6  $mol:...  @atom:O     0.0    -1.08257	 3.11835  4.76262
+    }
+
+    write_once("In Init") {
+	
+	units metal
+	atom_style full
+	pair_style reax/c NULL
+    }
+
+    write_once("In Settings") {
+	pair_coeff  * * ffield.reax
+    }
+
+    write_once("Data Masses") {
+	@atom:Si 28.0855
+	@atom:O 15.9994
+	
+    }
+
+
+
+} #Silica 
