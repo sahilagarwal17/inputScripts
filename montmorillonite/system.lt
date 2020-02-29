@@ -6,7 +6,7 @@
 
 
 import modifiedmontmorillonite.lt
-import water_box.lt
+import water.lt
 
 lattice = new montmorillonite [5].move(5.18,0,0)
 			      [5].move(0,8.98,0)
