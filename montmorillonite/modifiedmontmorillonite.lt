@@ -44,7 +44,6 @@
 	}# atomic coordinates
 
     write_once("In Init") {
-
 	units metal
 	atom_style full
 	pair_style reax/c NULL
@@ -53,7 +52,8 @@
 
     
     write_once("In Settings") {
-	pair_coeff * * ffield.reax
+	pair_style reax/c NULL
+	pair_coeff * * ffield.reax Si O Al H X
     }
 
 
