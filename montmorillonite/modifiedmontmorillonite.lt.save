@@ -1,0 +1,74 @@
+ montmorillonite {
+
+
+    write("Data Atoms") {
+	#AtomID   MolID     AtomType  Charge   x         y       z
+	$atom:Al  $mol:... @atom:Al 0.0 4.5341 2.9903 3.3210
+	$atom:Al1 $mol:... @atom:Al 0.0 4.5341 5.9897 3.3210
+	$atom:Al2 $mol:... @atom:Al 0.0 1.9441 7.4803 3.3210
+	$atom:Al3 $mol:... @atom:Al 0.0 1.9441 1.4997 3.3210
+	$atom:Si  $mol:... @atom:Si 0.0 2.8946 2.9544 0.6450
+	$atom:Si1 $mol:... @atom:Si 0.0 2.8946 6.0256 0.6450
+	$atom:Si2 $mol:... @atom:Si 0.0 3.5840 7.4444 5.9985
+	$atom:Si3 $mol:... @atom:Si 0.0 3.5840 1.5356 5.9985
+	$atom:Si4 $mol:... @atom:Si 0.0 0.3046 7.4444 0.6450
+	$atom:Si5 $mol:... @atom:Si 0.0 0.3046 1.5356 0.6450
+	$atom:Si6 $mol:... @atom:Si 0.0 0.9940 2.9544 5.9985
+	$atom:Si7 $mol:... @atom:Si 0.0 0.9940 6.0256 5.9985
+	$atom:O   $mol:... @atom:O 0.0 2.6594 4.4900 0.1485
+	$atom:O1  $mol:... @atom:O 0.0 4.2890 6.5374 0.0000
+	$atom:O2  $mol:... @atom:O 0.0 4.2890 2.4426 0.0000
+	$atom:O3  $mol:... @atom:O 0.0 2.5662 0.0000 2.2800
+	$atom:O4  $mol:... @atom:O 0.0 2.9433 6.2052 2.2305
+	$atom:O5  $mol:... @atom:O 0.0 2.9640 2.7748 2.2305
+	$atom:O6  $mol:... @atom:O 0.0 3.8192 0.0000 6.4935
+	$atom:O7  $mol:... @atom:O 0.0 2.1896 2.0474 6.6420
+	$atom:O8  $mol:... @atom:O 0.0 2.1896 6.9326 6.6420
+	$atom:O9  $mol:... @atom:O 0.0 3.9125 4.4900 4.3620
+	$atom:O10 $mol:... @atom:O 0.0 3.5348 1.7152 4.4115
+	$atom:O11 $mol:... @atom:O 0.0 3.5141 7.2648 4.4115
+	$atom:O12 $mol:... @atom:O 0.0 0.0694 0.0000 0.1485
+	$atom:O13 $mol:... @atom:O 0.0 1.6990 2.0474 0.0000
+	$atom:O14 $mol:... @atom:O 0.0 1.6990 6.9326 0.0000
+	$atom:O15 $mol:... @atom:O 0.0 5.1562 4.4900 2.2800
+	$atom:O16 $mol:... @atom:O 0.0 0.3533 1.7152 2.2305
+	$atom:O17 $mol:... @atom:O 0.0 0.3740 7.2648 2.2305
+	$atom:O8  $mol:... @atom:O 0.0 1.2292 4.4900 6.4935
+	$atom:O19 $mol:... @atom:O 0.0 4.7796 6.5374 6.6420
+	$atom:O20 $mol:... @atom:O 0.0 4.7796 2.4426 6.6420
+	$atom:O21 $mol:... @atom:O 0.0 1.3225 0.0000 4.3620
+	$atom:O22 $mol:... @atom:O 0.0 0.9448 6.2052 4.4115
+	$atom:O23 $mol:... @atom:O 0.0 0.9241 2.7748 4.4115
+	$atom:Ca  $mol:... @atom:Ca 0.0 0.9806 0.0000 10.8225
+	$atom:Ca1 $mol:... @atom:Ca 0.0 3.5706 4.4900 10.8225
+	}# atomic coordinates
+
+    write_once("In Init") {
+	units metal
+	atom_style full
+	pair_style lj/cut/coul/long 12.5  
+    }
+
+    
+    write_once("In Settings") {
+	pair_style reax/c NULL
+	pair_coeff * * ffield.reax Si O Al H X
+    }
+
+
+
+    write_once("Data Masses") {
+    @atom:Si 28.0855
+    @atom:O  15.9994
+    @atom:Al 26.9815
+    @atom:H  1.01
+    @atom:Ca 40.078
+
+    }
+
+
+
+
+} #montmorillonite
+
+
